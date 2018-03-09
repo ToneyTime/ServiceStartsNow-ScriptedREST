@@ -1,7 +1,7 @@
 # ServiceStartsNow - Import Sets supercharged with Scripted REST
 
 Welcome, this repo hosts the ServiceNow code for my example of Scripted REST being utilized along side Import Sets in the ServiceNow platform.
-This was created for sharing during the 2018 ServiceNow Knowledge Conference - CreatorCon CCB0118 session.
+* This was created for sharing during the **2018 ServiceNow Knowledge Conference - CreatorCon CCB0118** session.
 
 We will outline installation and usage steps. You can also find information and walk-through on my blog [ServiceStartsNow.com](https://servicestartsnow.com/category/project/scripted-rest-in-import-sets/)
 
@@ -28,8 +28,8 @@ Next, you will need to create a local account to be used as a Service Account du
 
 Create a new User. Name it whatever you like and be sure to give it a password.
 Once created, grant it the following roles:
-**rest_service**
-**x_8488_ssn_rest.import_role**
++**rest_service**
++**x_8488_ssn_rest.import_role**
 
 Finally, you will select from the left side menu **Service Starts Now - REST API Example > Administration > Test REST Message**.
 Open the record listed and then find **Basic auth profile**. Open that record and enter in the username and password for the account you had just created.
