@@ -1,7 +1,7 @@
 # ServiceStartsNow - Import Sets supercharged with Scripted REST
 
 Welcome, this repo hosts the ServiceNow code for my example of Scripted REST being utilized along side Import Sets in the ServiceNow platform.
-* This was created for sharing during the **2018 ServiceNow Knowledge Conference - CreatorCon CCB0118** session.
+This was created for sharing during the **2018 ServiceNow Knowledge Conference - CreatorCon CCB0118** session.
 
 We will outline installation and usage steps. You can also find information and walk-through on my blog [ServiceStartsNow.com](https://servicestartsnow.com/category/project/scripted-rest-in-import-sets/)
 
@@ -28,8 +28,8 @@ Next, you will need to create a local account to be used as a Service Account du
 
 Create a new User. Name it whatever you like and be sure to give it a password.
 Once created, grant it the following roles:
-+**rest_service**
-+**x_8488_ssn_rest.import_role**
+* rest_service
+* x_8488_ssn_rest.import_role
 
 Finally, you will select from the left side menu **Service Starts Now - REST API Example > Administration > Test REST Message**.
 Open the record listed and then find **Basic auth profile**. Open that record and enter in the username and password for the account you had just created.
@@ -37,3 +37,12 @@ Open the record listed and then find **Basic auth profile**. Open that record an
 If this entire record is read only, you may need to first ensure that **SvcStartsNow Rest Import** is your current application.
 
 # Lets Test It!
+Now we will confirm you've installed and setup everything properly. Note that this test will create/update a single user account so be careful to do this only in subproduction instances.
+
+Navigate from the left side menu to **Service Starts Now - REST API Example > Administration > Test REST Message**.
+Open the record and from the Related List, select either of the Test messages.
+
+Scroll down to the bottom and select the UI Action for Test.
+The test should run and your response should contain **{"http_status":"201","status_message":"User payload accepted and processed. Profile created for 123"}**
+
+Finally, open your user table list of records and look for records updated on today. You should find the new record with basic fields representing that the integration test worked succesfully.
